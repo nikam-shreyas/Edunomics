@@ -40,7 +40,10 @@ public class HomeActivity extends AppCompatActivity {
             return;
         });
 
-
+        openChat.setOnClickListener(v->{
+            startActivity(new Intent(HomeActivity.this, ChatActivity.class));
+            finish();
+        });
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
                 (this, android.R.layout.select_dialog_item, skills);
         //Getting the instance of AutoCompleteTextView
